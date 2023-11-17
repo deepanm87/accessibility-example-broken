@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inaccessible Web Page Example</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <img src="logo.png"> <!-- Missing alt attribute -->
+        <div class="navigation">
+            <a href="#" style="color: #aaa;">Home</a> <!-- Inline styles with poor contrast -->
+            <span>About</span> <!-- Non-interactive element used for navigation -->
+            <a href="#" tabindex="-1">Services</a> <!-- Not keyboard accessible -->
+        </div>
+    </div>
+
+    <div>
+        <div class="banner">
+            <h1 style="color: lightgrey;">Welcome to Our Site</h1> <!-- Poor contrast -->
+            <p>Click <a href="javascript:void(0);">here</a> for more info.</p> <!-- Ambiguous link text -->
+        </div>
+
+        <div>
+            <h2>Our Services</h2>
+            <div class="service" style="color: #ccc;"> <!-- Poor contrast -->
+                <p>Service 1</p>
+                <p>Description of Service 1...</p>
+            </div>
+            <div class="service">
+                <p>Service 2</p>
+                <p>Description of Service 2...</p>
+            </div>
+        </div>
+
+        <div>
+            <h2>Contact Us</h2>
+            <form>
+                <input type="text" name="name"> <!-- Missing form label -->
+                <input type="email" name="email"> <!-- Missing form label -->
+                <textarea name="message"></textarea> <!-- Missing form label -->
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </div>
+
+    <div>
+        <p>© 2023 Inaccessible Site</p>
+        <div>Follow us on <a href="#">Social Media</a></div>
+    </div>
+</body>
+</html>
